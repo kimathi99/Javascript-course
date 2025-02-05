@@ -116,7 +116,17 @@ if (sampleAge >requiredAge ){
 //     console.log("❌ You are not eligible to vote.");
 // }
 
+let votingAge =18; // declared
+let Age =17;
 
+if (votingAge<Age){
+    console.log("You cannot vote now");
+    alert('You cannot vote now');
+}
+else{
+    console.log("You can vote now");
+    alert('You can vote now');
+}
 
 
 // if (check condition) {
