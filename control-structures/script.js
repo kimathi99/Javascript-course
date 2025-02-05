@@ -211,6 +211,27 @@ while(value<100){
 
 
 
+
+// example function 
+//can have more one operation can take  values can in invoked 
+
+// function VotingAgeChecker(Age){
+//     let votingAge =18; // declared
+    
+//     if (votingAge<Age){
+//         console.log("You cannot vote now");
+//         alert('You cannot vote now');
+//         return  true;
+//     }
+//     else{
+//         console.log("You can vote now");
+//         alert('You can vote now');
+//         return false
+//     }
+// };
+
+// VotingAgeChecker(13);
+
 // continue statement
 // for (let i = 1; i <= 5; i++) {
 //     if (i === 3) {
