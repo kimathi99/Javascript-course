@@ -181,7 +181,11 @@ for (let value=100;value =>1;value--){
 //     count++; // Increment count
 // }
 
-
+let value=1;
+while(value<100){
+    console.log('whileloop,',value);
+    value++;
+}
 
 
 
