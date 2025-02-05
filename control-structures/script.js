@@ -144,17 +144,17 @@ else{
 // // code to be executed in loop
 // }
 
-for (let number=1;number <=100;number++){
-    console.log(number);
-    //required age is a global variable
-    // console.log(requiredAge);
-}
-for (let value=100;value =>1;value--){
-    console.log(value)
-    //lets checks whether is local--number is a local variable
-    // console.log(number);
+// for (let number=1;number <=100;number++){
+//     console.log(number);
+//     //required age is a global variable
+//     // console.log(requiredAge);
+// }
+// for (let value=100;value =>1;value--){
+//     console.log(value)
+//     //lets checks whether is local--number is a local variable
+//     // console.log(number);
 
-}
+// }
 
 // Two type of variables
 // local
