@@ -97,13 +97,16 @@ let sampleAge=6;
 // when we use operators  they  give  a value 
 // this value can either be a number , a string  (alphanumerics ) or  boolean 
 
-if (sampleAge <requiredAge ){
-    console.log("You have not  reached the correct Age");
-    alert('You have not  reached the correct Age');
-}else{
+// first example
+if (sampleAge >requiredAge ){
     console.log("You can join School");
     alert('You can join school');
+    
+}else{
+    console.log("You have not  reached the correct Age");
+    alert('You have not  reached the correct Age');
 }
+
 // exercise
 // let age = 18;
 
