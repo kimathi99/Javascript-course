@@ -1,3 +1,5 @@
+
+//Data Types
 // var: The most commonly used variable in JavaScript is var. It can be redeclared
 // and its value can be reassigned, but only inside the context of a function. When
 // the JavaScript code is run, variables defined using var are moved to the top. An
@@ -73,7 +75,7 @@
 // discarded. The le most bit's copies are shi ed in from the le . The sign bit
 // (the le most bit) does not change since the new le most bit has the same
 
-
+// Day     2
 
 // JavaScript If-Else Statements
 // The if-else statements are simple to comprehend. You can use them to set conditions
@@ -82,6 +84,26 @@
 // comparable to if-else. The switch however allows you to choose which of several
 // code blocks to run. The syntax of if-else statements in JavaScript is given below:
 
+let requiredAge =4; //  declared 
+let sampleAge=6;
+// outline 
+//  (---condition---){
+// ---operation that based on the condition
+//  }
+
+// statements
+// control  structures
+ 
+// when we use operators  they  give  a value 
+// this value can either be a number , a string  (alphanumerics ) or  boolean 
+
+if (sampleAge <requiredAge ){
+    console.log("You have not  reached the correct Age");
+    alert('You have not  reached the correct Age');
+}else{
+    console.log("You can join School");
+    alert('You can join school');
+}
 // exercise
 // let age = 18;
 
