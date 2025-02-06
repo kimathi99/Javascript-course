@@ -4,13 +4,19 @@
 
 // 1️⃣ Function Declaration (Named Function)
 // A function can be declared using the function keyword:
-
-// function greet(name) {
-//     return `Hello, ${name}! 👋`;
+ 
+// function doingsomething (a){
+//     let b=a;
+// return  b
 // }
 
-// // Invoking the function
-// console.log(greet("Alice")); // Output: Hello, Alice! 👋
+// in programming  a fuction takes in parameters
+function greet(name) {
+    return `Hello, ${name}! 👋`;
+}
+
+// Invoking the function
+console.log(greet("Alice")); // Output: Hello, Alice! 👋
 // 💡 Explanation:
 
 // The function greet takes a parameter name and returns a greeting message.
@@ -18,6 +24,11 @@
 // 2️⃣ Function Expression (Anonymous Function)
 // A function can also be assigned to a variable:
 
+const  greet2=function(name){
+    console.log(name,'this is in the function');
+    return `hello ,${name}` 
+}
+console.log(greet2('Nafraz'));
 // const add = function (a, b) {
 //     return a + b;
 // };
@@ -29,7 +40,13 @@
 // It is invoked using add(5, 3).
 // 3️⃣ Arrow Function (Modern Syntax)
 // A shorter way to write functions:
+const  addition=(a,b)=> a +b;
 
+console.log(addition(10,2));
+
+// function addition2(a,b){
+//     return  a=b
+// }
 // const multiply = (x, y) => x * y;
 
 // console.log(multiply(4, 2)); // Output: 8
@@ -38,14 +55,15 @@
 // Uses => (arrow notation) to define a function.
 // No need for return if the function has only one statement.
 // 4️⃣ Function with User Input (Prompt)
-// function getAge() {
-//     let age = prompt("Enter your age:");
-//     if (age >= 18) {
-//         console.log("✅ You are an adult.");
-//     } else {
-//         console.log("❌ You are a minor.");
-//     }
-// }
+function getAge() {
+    let age = prompt("Enter your age:");
+    if (age >= 18) {
+        alert("✅ You are an adult.");
+    } else {
+        alert("❌ You are a minor.");
+    }
+}
+getAge();
 
 // // Calling the function
 // getAge();
