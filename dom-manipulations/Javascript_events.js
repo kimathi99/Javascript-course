@@ -10,7 +10,16 @@
 // Mouse Events
 
 // click - When an element is clicked
+// document.addEventListener('click',function(){
+//     alert('I was clicked');
+// })
+//   document.getElementById("myButton").addEventListener("click", function() {
+//         alert("Button Clicked!");
+//     });
 // dblclick - When an element is double-clicked
+document.addEventListener('dblclick',function(){
+    alert('I was  double clicked ');
+})
 // mousedown - When a mouse button is pressed
 // mouseup - When a mouse button is released
 // mousemove - When the mouse moves over an element
@@ -50,9 +59,9 @@
 // <button id="myButton">Click Me</button>
 
 // <script>
-//     document.getElementById("myButton").addEventListener("click", function() {
-//         alert("Button Clicked!");
-//     });
+    // document.getElementById("myButton").addEventListener("click", function() {
+    //     alert("Button Clicked!");
+    // });
 // </script>
 // Using JavaScript Property (Alternative approach)
 // You can assign a function to the event property of an element.
