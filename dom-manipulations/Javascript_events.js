@@ -17,14 +17,21 @@
 //         alert("Button Clicked!");
 //     });
 // dblclick - When an element is double-clicked
-document.addEventListener('dblclick',function(){
-    alert('I was  double clicked ');
-})
+//document.addEventListener('dblclick',function(){
+    //alert('I was  double clicked ');
+//})
 // mousedown - When a mouse button is pressed
 // mouseup - When a mouse button is released
 // mousemove - When the mouse moves over an element
 // mouseover - When the mouse enters an element
+document.addEventListener('mouseover',function(){
+alert("The mouse is over this page now");
+})
 // mouseout - When the mouse leaves an element
+document.addEventListener('mouseout', function(){
+    alert('This is mouse out'); 
+});
+
 // Keyboard Events
 
 // keydown - When a key is pressed
