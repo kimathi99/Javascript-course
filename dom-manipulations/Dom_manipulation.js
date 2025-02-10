@@ -15,11 +15,19 @@
 // JavaScript provides different ways to select HTML elements for manipulation:
 
 // Using getElementById() (Selects an element by its id)
-
+// document.getElementById("clickButton").addEventListener('dblclick',function(){
+//     alert('I was  double clicked ');
+// })
+// let  button=document.getElementById("clickButton");
+// console.log(button);
 // let heading = document.getElementById("title");
 // console.log(heading.innerText);
 // Using getElementsByClassName() (Selects multiple elements by class)
+let  LearningButton=document.getElementsByClassName("learning-button");
 
+//using class name
+
+console.log(LearningButton[0].innerHTML);
 // let items = document.getElementsByClassName("list-item");
 // console.log(items[0].innerText);
 // Using getElementsByTagName() (Selects elements by tag name)
@@ -30,7 +38,12 @@
 
 // let firstItem = document.querySelector(".list-item");
 // console.log(firstItem.innerText);
+// getting the first elemt use queryselector
+document.querySelector("#title");  //  using # is for the id
+document.querySelector(".title");  //. fullstop is for the class name
+ 
 // Using querySelectorAll() (Selects all matching elements)
+// and use the same  symbol # . (same use case   for the querySelector)
 
 // let allItems = document.querySelectorAll(".list-item");
 // allItems.forEach(item => console.log(item.innerText));
@@ -44,11 +57,22 @@
 // let content = document.getElementById("info");
 // content.innerHTML = "<strong>New Content Here!</strong>";
 // Changing Styles
+let button=document.querySelector('#clickButton');
+button.addEventListener('click',function(){
+    if(button.style.backgroundColor=='blue'){
+        button.style.backgroundColor='red'; 
+    }else{
+        button.style.backgroundColor='blue'; 
+    }
 
+});
 // let box = document.getElementById("box");
 // box.style.backgroundColor = "blue";
 // box.style.color = "white";
 // Adding a New Element
+
+
+
 
 // let newItem = document.createElement("li");
 // newItem.innerText = "New List Item";
