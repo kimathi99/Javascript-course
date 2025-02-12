@@ -1,0 +1,24 @@
+{
+    "name": "React + TypeScript + Vite Dev Container",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "appPort": [5173],
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash",
+      "editor.formatOnSave": true
+    },
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "dsznajder.es7-react-js-snippets"
+    ]
+        }
+    },
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/app,type=bind"
+    ]
+  }
+  

@@ -47,14 +47,16 @@
 
 // Verify
 // Copy code
-// console.log(myVar); // Output: undefined
-// var myVar = 5;
-// console.log(myVar); // Output: 5
+console.log(myVar); // Output: undefined
+var myVar = 5;
+console.log(myVar); // Output: 5
 
-// myFunction(); // Output: "Hello, World!"
-// function myFunction() {
-//     console.log("Hello, World!");
-// }
+myFunction(); // Output: "Hello, World!"
+function myFunction() {
+    console.log("Hello, World!");
+}
+
+
 // Explanation:
 
 // The first console.log(myVar) outputs undefined because myVar is hoisted but not initialized.
@@ -116,6 +118,8 @@
 
 // Verify
 // Copy code
+let agenumber :any =30; //javascript
+let age:number=30;
 // let age: number = 30; // Age is a number
 // let name: string = "Alice"; // Name is a string
 // let isStudent: boolean = true; // Is a student or not
