@@ -9,9 +9,12 @@
 // Enhances code readability
 // Basic Function Syntax
 
-// function greet(name: string): string {
-//     return `Hello, ${name}!`;
-// }
+// named function
+
+function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+console.log(greet('Nafraz'));
 // console.log(greet("Alice")); // Hello, Alice!
 // Arrow Functions
 
