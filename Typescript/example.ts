@@ -47,14 +47,14 @@
 
 // Verify
 // Copy code
-console.log(myVar); // Output: undefined
-var myVar = 5;
-console.log(myVar); // Output: 5
+// console.log(myVar); // Output: undefined
+// var myVar = 5;
+// console.log(myVar); // Output: 5
 
-myFunction(); // Output: "Hello, World!"
-function myFunction() {
-    console.log("Hello, World!");
-}
+// myFunction(); // Output: "Hello, World!"
+// function myFunction() {
+//     console.log("Hello, World!");
+// }
 
 
 // Explanation:
