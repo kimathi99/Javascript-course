@@ -3,7 +3,7 @@
     "dockerFile": "Dockerfile",
     "context": "..",
     "appPort": [5173],
-    "postCreateCommand": "npm install",
+    // "postCreateCommand": "npm install",
     "customizations": {
         "vscode": {
             "settings": {

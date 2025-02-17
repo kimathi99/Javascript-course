@@ -10,44 +10,58 @@
 // Basic Function Syntax
 
 // named function
+// const additionOperation=function (a:number,b:number){
+// return a+b;
+// }
+// const multipleOperations=function()async:number{
+//   await  2+2;
+//   await  3+5;
+//     7-4;
+// } 
 
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-}
-console.log(greet('Nafraz'));
+const additionOperation=(a:number,b:number)=>a+b;
+additionOperation(0,9);
+// function greet(name: string): string {
+//     return `Hello, ${name}!`;
+
+    
+// }
+// console.log(greet('Nafraz'));
 // console.log(greet("Alice")); // Hello, Alice!
 // Arrow Functions
 
-// const add = (a: number, b: number): number => a + b;
-// console.log(add(5, 3)); // 8
+const add = (a: number, b: number): number => a + b;
+console.log(add(5, 3)); // 8
 // 1.2 Real-Life Scenario: Payment Gateway Callback
 // 💡 Use Case: In a payment system, we need to define a function type for callbacks when a payment is successful.
 
-// type PaymentCallback = (status: string, amount: number) => void;
+type PaymentCallback = (status: string, amount: number) => void;
 
-// const onPaymentSuccess: PaymentCallback = (status, amount) => {
-//     console.log(`Payment ${status}: $${amount}`);
-// };
+const onPaymentSuccess: PaymentCallback = (status, amount) => {
+    console.log(`Payment ${status}: $${amount}`);
+};
 
-// onPaymentSuccess("Success", 100);
+onPaymentSuccess("Success", 100);
+
 // Module 2: Advanced Function Concepts
 // 📌 Objective: Explore optional, default parameters, and rest parameters.
 
 // 2.1 Optional and Default Parameters
 // Optional Parameters (?)
 
-// function displayMessage(msg: string, user?: string) {
-//     console.log(`${msg}, ${user ?? "Guest"}!`);
-// }
-// displayMessage("Welcome"); // Welcome, Guest!
-// displayMessage("Welcome", "Alice"); // Welcome, Alice!
+function displayMessage(msg: string, user?: string) {
+    console.log(`${msg}, ${user ?? "Guest"}!`);
+}
+displayMessage("Welcome"); // Welcome, Guest!
+displayMessage("Welcome", "Alice"); // Welcome, Alice!
+
 // Default Parameters
 
-// function createUser(name: string, isAdmin: boolean = false) {
-//     console.log(`${name} is ${isAdmin ? "an Admin" : "a User"}`);
-// }
-// createUser("John"); // John is a User
-// createUser("Mary", true); // Mary is an Admin
+function createUser(name: string, isAdmin: boolean = false) {
+    console.log(`${name} is ${isAdmin ? "an Admin" : "a User"}`);//ternary expression  expression
+}
+createUser("John"); // John is a User
+createUser("Mary", true); // Mary is an Admin
 // 2.2 Real-Life Scenario: Email Notification System
 // 💡 Use Case: Send emails to users, where the subject is mandatory, but the body can be optional.
 
@@ -67,25 +81,40 @@ console.log(greet('Nafraz'));
 // Works with multiple types
 // Maintains type safety
 // Basic Syntax
-
-// function identity<T>(arg: T): T {
-//     return arg;
+// function greet<string>(name:string):string{
+//     return name;
 // }
-// console.log(identity<string>("Hello")); // Hello
-// console.log(identity<number>(42)); // 42
+function identity<T>(arg: T): T {
+    return arg;
+}
+console.log(identity<string>("Hello")); // Hello
+console.log(identity<number>(42)); // 42
 // 3.2 Real-Life Scenario: Fetching API Data
 // 💡 Use Case: Create a function that can fetch data of any type from an API.
 
-// async function fetchData<T>(url: string): Promise<T> {
-//     const response = await fetch(url);
-//     return response.json();
-// }
-
+async function fetchData<T>(url: string): Promise<T> {
+    const response = await fetch(url);
+    return response.json();
+}
+console.info
+// asnchronous functionss
+// task 1    19 seconds  to complete
+// task 2
+// task 3
+// task 4
+// // aysnchronous function ---we do not have the values 
+// // query  binance --get the value after 2 seconds --await the  value--we are query apis and systems  we have to await
+//         2  1 3 4-----total time taken is 6 seconds
+// task 1 ----
+// task 2 --
+// task 3 -----
+// task 4 ------
 // // Fetching a user
 // fetchData<{ name: string; age: number }>("https://api.example.com/user")
 //     .then(user => console.log(user.name, user.age));
 // Module 4: Advanced Generics Concepts
 // 📌 Objective: Understand constraints, multiple types, and generic interfaces.
+
 
 // 4.1 Constraints in Generics
 // 💡 Use Case: Ensure that a function only accepts objects with a length property.
