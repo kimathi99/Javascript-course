@@ -25,14 +25,26 @@ function App() {
 
   const [count, setCount] = useState(0);
    function clickIncreaseHandler(){
-    setCount(count+1 );
+    if (count>= 10) {
+      return;
+      
+    } else  {
+      setCount(count+1 );
+      
+    }
+    
     
    }
    function clickDecreaseHandler(){
-    setCount(count-1 );
-    
-   }
-
+    if (count>= 1) {
+      setCount(count-1 ); 
+      
+    } else  {
+      
+      return;
+      
+    }
+  }
   return (
     <div>
       < h1 id="title">React  simple counter</h1>
