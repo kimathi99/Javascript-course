@@ -47,10 +47,18 @@ useEffect(() => {
     
    }
    function clickDecreaseHandler(){
-    setCount(count-1 );
-    
-   }
-
+    if (count>= 1) {
+      setCount(count-1 ); 
+      
+    } else  {
+      
+      return;
+      
+    }
+  }
+  function clickhandlerButton(){
+    setButtonClicked(!buttonClicked)
+  }
   return (
     <div>
       < h1 id="title">React  simple counter</h1>
