@@ -1,4 +1,4 @@
-import  React,{useState} from 'react'
+import  React,{useState,useRef ,useEffect} from 'react'
 
 import './App.css'
 import'./example.css';
@@ -22,8 +22,19 @@ function App() {
 // this initial state  can be of differant data type
 // it can take an array --[]
 // it can also  be  a string '',number of any value,boolean ,null,undefined
+// 3. useref  is  more data persistent 
+// 4.useeffect
+  // const [count, setCount] = useState(0);
+  const[count, setCount] = useState(0);
+  const intialCount = useRef(0);
+const [buttonClicked,setButtonClicked]=useState(false);
+useEffect(() => {
+  // clickIncreaseHandler(); // Calls the increment function automatically
+  if (count === 0) return;
+  intialCount.current = intialCount.current + 1; // Stores how many times `count` changed
+}, [count, buttonClicked]); // Runs when `count` or `buttonClicked` changes
 
-  const [count, setCount] = useState(0);
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    function clickIncreaseHandler(){
     if (count>= 10) {
       return;
@@ -36,15 +47,10 @@ function App() {
     
    }
    function clickDecreaseHandler(){
-    if (count>= 1) {
-      setCount(count-1 ); 
-      
-    } else  {
-      
-      return;
-      
-    }
-  }
+    setCount(count-1 );
+    
+   }
+
   return (
     <div>
       < h1 id="title">React  simple counter</h1>
@@ -52,10 +58,28 @@ function App() {
       <p>Click the button to increase your score!</p>
       <button id="clickButton"  onClick={clickIncreaseHandler}> Increase </button>
       <button id="clickButton2"  onClick={clickDecreaseHandler}> Decrease</button>
+      <button id="clickButton2"  onClick={clickhandlerButton}>Click button</button>
       <p>Score: <span id="score">{count}</span></p>
+      <p>useref:{intialCount.current} <span id="score"></span></p>
       <ComponentB/>
     </div>
   )
+// const [stateValue, setStateValue] = useState(0);
+//   const refValue = useRef(0);
+
+//   const handleClick = () => {
+//     setStateValue(stateValue + 1);
+//     refValue.current += 1;
+//     console.log("Ref Value (No Re-render):", refValue.current);
+//   };
+
+//   return (
+//     <div>
+//       <p>State Value: {stateValue}</p>
+//       <p>Ref Value (Not Re-rendered): {refValue.current}</p>
+//       <button onClick={handleClick}>Increase</button>
+//     </div>
+//   );
 }
 
 export default App
