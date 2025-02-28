@@ -2,9 +2,9 @@
 
 // Understanding useRef vs useState
 // Feature	useState	useRef
-// Causes Re-render?	✅ Yes (Changing state re-renders the component)	❌ No (Changing ref does NOT re-render)
-// Persistent Across Renders?	✅ Yes (State value survives re-renders)	✅ Yes (Ref value survives re-renders)
-// Persists on Refresh?	❌ No (State resets on refresh)	❌ No (Ref resets on refresh)
+// Causes Re-render?	✅ Yes (Changing state re-renders the component)----	❌ No (Changing ref does NOT re-render)
+// Persistent Across Renders?	✅ Yes (State value survives re-renders)	----✅ Yes (Ref value survives re-renders)
+// Persists on Refresh?	❌ No (State resets on refresh)	---❌ No (Ref resets on refresh)
 // Use Case	Storing dynamic data that affects the UI	Keeping values without causing re-renders
 // Why does useRef reset on refresh?
 // useRef does not store data permanently—it's only meant for tracking values while the component is mounted.
@@ -27,7 +27,7 @@
 // const refValue = useRef(0);
 
 // const handleClick = () => {
-//   setStateValue(stateValue + 1);  // Causes re-render
+//   setStateValue(stateValue + 1);  // Causes re-render----it rebuilds only we are not able to see with our naked eye
 //   refValue.current += 1;  // Changes but does NOT re-render
 //   console.log("Ref Value (No Re-render):", refValue.current);
 // };

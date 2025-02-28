@@ -1,8 +1,13 @@
-import  React,{useState,useRef ,useEffect} from 'react'
+
 
 import './App.css'
 import'./example.css';
 import ComponentB from './components/componentB';
+import { CounterProvider } from './context/countercontext';
+import { Home } from './components/home';
+import { MemoizedFunctions } from './components/usecallback';
+import ExpensiveComputation from './components/usememo';
+
 function App() {
   // list of all  all  hooks to be used 
   // 1.useContext- Context lets a component receive information from distant parents without passing it as props.
@@ -25,52 +30,54 @@ function App() {
 // 3. useref  is  more data persistent 
 // 4.useeffect
   // const [count, setCount] = useState(0);
-  const[count, setCount] = useState(0);
-  const intialCount = useRef(0);
-const [buttonClicked,setButtonClicked]=useState(false);
-useEffect(() => {
-  // clickIncreaseHandler(); // Calls the increment function automatically
-  if (count === 0) return;
-  intialCount.current = intialCount.current + 1; // Stores how many times `count` changed
-}, [count, buttonClicked]); // Runs when `count` or `buttonClicked` changes
+//   const[count, setCount] = useState(0);
+//   const intialCount = useRef(0);
+// const [buttonClicked,setButtonClicked]=useState(false);
+// useEffect(() => {
+//   // clickIncreaseHandler(); // Calls the increment function automatically
+//   if (count === 0) return;
+//   localStorage.setItem("useref",intialCount.current.toString());
+//   intialCount.current = intialCount.current + 1; // Stores how many times `count` changed
+// }, [count, buttonClicked]); // Runs when `count` or `buttonClicked` changes
 
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-   function clickIncreaseHandler(){
-    if (count>= 10) {
-      return;
+//    // eslint-disable-next-line react-hooks/exhaustive-deps
+//    function clickIncreaseHandler(){
+//     if (count>= 10) {
+//       return;
       
-    } else  {
-      setCount(count+1 );
+//     } else  {
+//       setCount(count+1 );
       
-    }
+//     }
     
     
-   }
-   function clickDecreaseHandler(){
-    if (count>= 1) {
-      setCount(count-1 ); 
+//    }
+//    function clickDecreaseHandler(){
+//     if (count>= 1) {
+//       setCount(count-1 ); 
       
-    } else  {
+//     } else  {
       
-      return;
+//       return;
       
-    }
-  }
-  function clickhandlerButton(){
-    setButtonClicked(!buttonClicked)
-  }
+//     }
+//   }
+//   function clickhandlerButton(){
+//     setButtonClicked(!buttonClicked)
+//   }
+
+
   return (
-    <div>
-      < h1 id="title">React  simple counter</h1>
-      <h2 id="title">example</h2>
-      <p>Click the button to increase your score!</p>
-      <button id="clickButton"  onClick={clickIncreaseHandler}> Increase </button>
-      <button id="clickButton2"  onClick={clickDecreaseHandler}> Decrease</button>
-      <button id="clickButton2"  onClick={clickhandlerButton}>Click button</button>
-      <p>Score: <span id="score">{count}</span></p>
-      <p>useref:{intialCount.current} <span id="score"></span></p>
-      <ComponentB/>
-    </div>
+    <CounterProvider>
+     <ExpensiveComputation></ExpensiveComputation>
+      <MemoizedFunctions></MemoizedFunctions>
+        <Home/>
+        <ComponentB/>
+
+        
+
+    </CounterProvider>
+   
   )
 // const [stateValue, setStateValue] = useState(0);
 //   const refValue = useRef(0);
